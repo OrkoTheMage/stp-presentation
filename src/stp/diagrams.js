@@ -18,7 +18,7 @@ const startScreen = `
                            | Terminal-based presentation on Spanning Tree Protocol (STP) |                                                    
 
                          
-This project demonstrates the operation of the Spanning Tree Protocol (STP) in a network with multiple switches and hosts.
+This project demonstrates the operation of the Spanning Tree Protocol (STP) in a network with multiple switches and hosts
 
 Features:
 # Visualizes network topologies and broadcast storms
@@ -114,7 +114,7 @@ Controls:
 
 # STP uses Bridge Protocol Data Units (BPDUs) to exchange information about network topology between switches
 
-# BPDUs are sent every 2 seconds (Hello Time) and propagate quickly across the network. STP requires a 30-50 seconds to converge after a topology change, depending on the network size and configuration.
+# BPDUs are sent every 2 seconds (Hello Time) and propagate quickly across the network. STP requires a 30-50 seconds to converge after a topology change, depending on the network size and configuration
 
 Extra Information:
 ----------------------
@@ -122,7 +122,7 @@ Extra Information:
 ■ Forward Delay: 15s - Time a port spends in Listening and Learning states before forwarding
 ■ Max Age: 20s - Maximum age of a received BPDU before it is discarded
 
-# Once BPDUs are exchanged, the switch with the lowest Bridge ID is elected as the root bridge. STP then determines which ports should forward traffic and which should be blocked to prevent loops.
+# Once BPDUs are exchanged, the switch with the lowest Bridge ID is elected as the root bridge. STP then determines which ports should forward traffic and which should be blocked
 `
 
 // Step 3: Show root bridge election and resulting topology
@@ -164,7 +164,7 @@ Extra Information:
 
 # MAC addresses are used as tiebreakers when switches have the same priority - the switch with the lowest MAC address wins in these cases
 
-# The root bridge's importance is that it serves as the reference point for all path cost calculations in the network - all switches determine their best path to the root bridge and block any redundant paths to prevent loops
+# The root bridge's importance is that it serves as the reference point for all path cost calculations in the network - all switches determine their best path to the root bridge and block any redundant paths
 `
 
 // Step 4: Show port states after STP converges
@@ -199,7 +199,7 @@ const portDiagram = `
 
 # Path cost is determined by the speed of the link - the faster the link, the lower the path cost (i.e table below)
 
-# The designated port (DP) is the port on a network segment that advertises the lowest root path cost toward that segment
+# The designated port (DP) for a network segment is the port that forwards towards the root bridge at the lowest path cost
 
 # The blocked port (BP) is the port that is blocked to prevent loops - in this case, the port connecting Sw1 and Sw2 is blocked since it has the highest path cost to the root bridge
 
@@ -235,13 +235,13 @@ const factsScreen = `
 
 # Linux appeared in 1991, PowerPoint in 1990, and Keynote in 2003 (hence why I chose to present on a CLI today)
 
-# Early presentations were mostly CLI-based or ASCII, building on command-line interfaces developed in the 1960s and 1970s
+# Early presentations were mostly CLI-based / ASCII, building on command-line interface software developed in the 1960s and 1970s
 
-# STP was standardized as IEEE 802.1D in 1990 and has been widely used in Ethernet networks to prevent loops.
+# STP was standardized as IEEE 802.1D in 1990 and has been widely used in Ethernet networks to prevent loops and ensure reliable communication
 
-# Modern switches can often converge faster than classic STP using Rapid Spanning Tree Protocol (RSTP, IEEE 802.1w) reducing convergence from ~30-50s to 1-10s.
+# Modern switches can often converge faster than classic STP using Rapid Spanning Tree Protocol (RSTP, IEEE 802.1w) reducing convergence from ~30-50s to 1-10s
 
-# Today, most enterprise networks use RSTP or MSTP, but understanding classic STP is critical for troubleshooting and learning network fundamentals.
+# Today, most enterprise networks use RSTP or MSTP, but understanding classic STP is critical for troubleshooting and learning network fundamentals
                                                                              
                                                                             
                                                                             
@@ -295,7 +295,7 @@ const factsScreen = `
 
                                                   
                                                 | CTRL+C to Exit |
-                                                  
+
                             Repository: https://github.com/OrkoTheMage/Network-CLI-Presenter
 `
 export const diagrams = [startScreen, baseDiagram, bpduDiagram, rbDiagram, portDiagram, factsScreen, thankYouScreen]
