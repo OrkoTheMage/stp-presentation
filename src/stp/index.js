@@ -24,5 +24,16 @@ function startStpPresentation(chalk) {
   box.setContent(state.diagramContent)
   screen.render()
 
-  attachControls({ screen, box, diagrams, state, colorDiagram, renderWithHashHighlight, chalk, startBlinking, stopBlinking, isBlinkOn, showHashLine })
+  attachControls({ 
+    screen, 
+    box, 
+    diagrams, 
+    state, 
+    colorDiagram, 
+    renderWithHashHighlight, 
+    chalk, 
+    startBlinking, 
+    stopBlinking, 
+    isBlinkOn, 
+    showHashLine })
 }

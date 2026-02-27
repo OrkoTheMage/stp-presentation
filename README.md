@@ -17,16 +17,20 @@ Install dependencies:
 npm install
 ```
 
-Start the presentation:
+Start the presentation selector (recommended):
 
 ```bash
-npm start
+npm run present
 ```
 
-Or run directly:
+Then pick a presentation from the interactive list (use Tab/arrow keys and Enter to select).
+
+Or run a presentation directly by pointing Node at the presentation's `index.js` under `src`:
 
 ```bash
-node src/index.js
+node src/<presentation>/index.js
+# example:
+node src/stp/index.js
 ```
 
 ## Controls
@@ -38,14 +42,24 @@ node src/index.js
 ## Tech stack
 - Node.js (ES Modules)
 - Libraries: `blessed`, `blessed-contrib`, `chalk`
+ - Libraries:
+	 - `blessed`
+	 - `blessed-contrib`
+	 - `chalk`
+	 - `enquirer` (interactive selector)
+
+Scripts:
+- `npm run present` — interactive presentation selector
 
 Key source files:
-- [src/index.js](src/index.js)
-- [src/diagrams.js](src/diagrams.js)
-- [src/ui.js](src/ui.js)
-- [src/renderer.js](src/renderer.js)
-- [src/state.js](src/state.js)
-- [src/utils/controls.js](src/utils/controls.js)
+ - [src/stp/index.js](src/stp/index.js)
+ - [src/stp/diagrams.js](src/stp/diagrams.js)
+ - [src/stp/ui.js](src/stp/ui.js)
+ - [src/stp/renderer.js](src/stp/renderer.js)
+ - [src/stp/state.js](src/stp/state.js)
+ - [src/stp/styles/colorDiagram.js](src/stp/styles/colorDiagram.js)
+ - [src/stp/utils/controls.js](src/stp/utils/controls.js)
+ - [src/stp/utils/helpers.js](src/stp/utils/helpers.js)
 
 ## Current content
 - Presentation on STP. More presentations will be added in future updates.
