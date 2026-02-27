@@ -41,7 +41,6 @@ node src/stp/index.js
 
 ## Tech stack
 - Node.js (ES Modules)
-- Libraries: `blessed`, `blessed-contrib`, `chalk`
  - Libraries:
 	 - `blessed`
 	 - `blessed-contrib`
