@@ -36,13 +36,6 @@ Controls:
 
 
 
-
-
-
-
-
-
-
                                                                                         Credit: Aeryn Grindle
                                                                                                 (OrkoTheMage)
                                                                                                 © 2026
@@ -50,7 +43,7 @@ Controls:
 
 // Step 1: Initial topology with 4 switches and 4 hosts
   const baseDiagram = `
-                                                                                                                   
+                                                                                                                    
 ┌───────────────┐                            ┌────────────────┐                                 ┌───────────────┐  
 │ ┌───────────┐ │                    ┌───────│    SWITCH 3    │───────┐                         │ ┌───────────┐ │  
 │ │           │ │                    │       │                │       │                         │ │           │ │  
@@ -94,7 +87,7 @@ Controls:
 
 // Step 2: Show BPDU exchange between switches
   const bpduDiagram = `
-                                                                                                                   
+                                                                                                                    
                                      ┌─────┐                                                                       
                                      │BPDUs│                                                                       
 ┌───────────────┐                    └─────┘ ┌────────────────┐                                 ┌───────────────┐
@@ -201,7 +194,7 @@ const portDiagram = `
 │ │           │ │                                                                               │ │           │ │
 │ └───────────┘ │                                                                               │ └───────────┘ │
 └───┌───────┐───┘                                                                               └───┌───────┐───┘
-    └───────┘                                                                                       └───────┘                                                                                                                                                                                                                                
+    └───────┘                                                                                       └───────┘                                                                                                                                                                                                                                 
 # After STP converges, we can find the root port (RP) for each switch - the port with the lowest path cost from non-root bridges to the root bridge
 
 # Path cost is determined by the speed of the link - the faster the link, the lower the path cost (i.e table below)
@@ -219,7 +212,7 @@ const portDiagram = `
  │10 Mbps = 100│ 
  └─────────────┘ 
  `
-const factsScreen = `                                                                                                                                                                                                                                                                 
+const factsScreen = `                                                                                                                                                                                                                                                                
                             ┌─────────────────────────────────────────────────────────┐             
                             │                                                         │             
                             │  ██████ ▄▄ ▄▄ ▄▄  ▄▄   ██████ ▄▄▄   ▄▄▄▄ ▄▄▄▄▄▄ ▄▄▄▄    │             
@@ -251,14 +244,12 @@ const factsScreen = `
 # Today, most enterprise networks use RSTP or MSTP, but understanding classic STP is critical for troubleshooting and learning network fundamentals.
                                                                              
                                                                             
-                                                                             
-                                                                             
+                                                                            
+                                                                            
 `
 
  const thankYouScreen = `
                               
- 
-
 
 
 
@@ -282,24 +273,7 @@ const factsScreen = `
                          ▀▀                ▀▀▀                                           
 
                          
+                         ▀▀                ▀▀▀                                           
 
-
-                         
-                                                  ▄▄                                               
-                                                ▄█▀▀█▄                                             
-                                                ██  ██         ▄          ▄                        
-                                                ██▀▀██   ▄█▀█▄ ████▄██ ██ ████▄                    
-                                      ▀▀▀▀    ▄ ██  ██   ██▄█▀ ██   ██▄██ ██ ██                    
-                                              ▀██▀  ▀█▄█▄▀█▄▄▄▄█▀  ▄▄▀██▀▄██ ▀█                    
-                                                                      ██                                                                                                                                                        
- 
- 
-
-
-
-
-
- 
-                                                  | CTRL+C to Exit |                    `;
- const diagrams = [startScreen, baseDiagram, bpduDiagram, rbDiagram, portDiagram, factsScreen, thankYouScreen];
-    module.exports = { diagrams };
+                                                  | CTRL+C to Exit |                    `
+ export const diagrams = [startScreen, baseDiagram, bpduDiagram, rbDiagram, portDiagram, factsScreen, thankYouScreen]
